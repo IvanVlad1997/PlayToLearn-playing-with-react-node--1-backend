@@ -3,6 +3,7 @@ const Test = require("../models/test");
 exports.save = async (req, res) => {
     try {
         const { data } = req.body;
+        console.log(data)
         const test = await new Test({ data: data, name: 'canvas'}).save();
         console.log(test)
         res.json(test);
